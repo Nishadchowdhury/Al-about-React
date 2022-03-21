@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> How to react work </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+   
+
+    <h1 class="h1 r"> How to work react </h1>
+    <p class="p">
+    <span class="g-rem">DOM and Vartual DOM</span>
+    যেমন একটা বই এর ক্ষেত্রে সেটার কোন একটা অংশ কে যদি কখনো পরিবর্তন করতে চাই তবে 
+    সেটার আগের কপি টার সাথে তুলনা করে কাজটা করতে হবে <br>
+
+    DOM এর মধ্যেও কিছু পরিবর্তন করতে হলে সেটাকে আবার re render করতে হবে । <br>
+    যেটা অনেক বেশি expensive অর্থাৎ এই ক্ষেত্রে অনেক বেশি power and টাইম খরচ হয় । <br>
+    <br>
+    যেটা আমারা ui তে দেখি সেটা হল orginal DOM , react আর একটা dom বানিয়ে নেয় যেটা দেখতে Originel DOM এর মতই দেখতে কিন্তু কিছুটা আলাদা কিছুটা simple looking <br>
+    এটার সুবিধা হল js DOM এর মধ্যে গিয়ে খুব দ্রুত গিয়ে চেক করে ফেলতে পারে । যে কোথায় কি কি পরিবর্তন হয়েছে <br>
+    তারপর সে actual dom and vartual এর মধ্যে তুলনা করে সহজেই শুধু মাত্র সেই state টাকে ui তে আপডেট করে । <br>
+    <img src="./ifile/vartual dom vs actual dom.jpg" alt="">
+    এটা করে Diff Algrorith এর সাহায্যে । <br>
+    <img class="w-700" src="./ifile/react diff algorithm.png" alt="">
+    এটা কাজ করে react fiber architecture algorithm এর উপর <br>
+    এই react fiber algorithm এর কাজ হল সে খুঁজে খুঁজে বের করে যে কিভাবে আপডেট করলে আপডেট টা Efficiant হয় <br>
+    আর সে কাজ করে Asynchronous way তে <br>
+    এতে করে কখনো এমন হতে পারে যে কোন একটা part আপডেট করতে পারতেছেনা তখন যেহেতু 
+    পুরা পেজটা আটকে না যায় সে জন্য এটা Asynchronously কাজ করে <br>
+
+
+    যেমন আরেকটা জিনিস আছে যেটা Performance এর অনেক ভাল করে দেয় <br> সেটা হল কোন array of data কে loop করলে সেখানে বলে দেয় যে একটা key দেয়ার জন্য , যাতে করে react বুজতে পারে যে কোন state এর ডাটা কে replace করে update করতে হবে । <br>
+    
+    <p class="p g">
+      <span class="rem2">মুল কথাঃ-</span> react memory এর মধ্যে real dom এর কাছাকাছি একটা vartual dom তৈরি করে যেটা যাতে তুলনা করতে পারে যে ui এর কোন অংশে কি কি পরিবর্তন এসেছে । <br>
+      তারপর সেই অনুসারে তারা ui কে change করবে <br>
+      এটা করার জন্য diff algorithm ব্যেবহার করে <br>
+    </p>
+
+    <h1 class="g">_____ react 18 more feature _____</h1>
+    (react 18 এ আরও একটা জিনিস আসবে তা হল , কোন একটা কাজ update হতে যদি বেশি সময় লাগে চাইলে সেটাকে Suspend করে দিতে পারবো , সেটার Priority কমিয়ে দিতে পারবো <br>
+    এতে করে একাদিক কাজ থাকলে কোন কাজটা আগে করতে হবে সে Priority সেট করে দিতে পারবো ।  )
+
+    
+      
+    </p>
+
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>

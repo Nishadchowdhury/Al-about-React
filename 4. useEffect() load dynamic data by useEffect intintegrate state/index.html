@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>more</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="ifile/favicon.jpg" type="image/x-icon">
+</head>
+<body>
+<h1 class="r">useEffect()</h1>
+
+<p class="p">
+  external data শো করাতে হলে stape ৫টা <br>
+  1. state diclare করতে হবে (external data load করার জন্য) <br>
+  2. useEffect দিতে হবে এটার মধ্যে ২টা parameter দিতে হবে (একটা empty array , annonymous function ) <br>
+  3. useEffect এর annonymous function এর মধ্যে data কে load করে তারপর 
+  4. useState এর defult function এর মধ্যে পাঠিয়ে দিতে হবে । 
+  5. সে data কে map করে দেখাতে হবে ।   
+</p>
+
+<p class="p">
+  <span class="g">_____ এটা কোন api থেকে fetch করে data নেয়ার ক্ষেত্রে ব্যেবহার করতে হয় । _____</span> <br>
+  structure of <img src="./ifile/structure of useEffect.png" alt="">
+  এখানে second braket এর মধ্যে fetch করতে হবে <br>
+  <img src="./ifile/structure of useEffect 2.png" alt="">
+  এখন চাইলে data কে log না করে state এর মধ্যে পাঠিয়ে দেওয়া যাবে । <br>
+  <img src="./ifile/structure of useEffect 3.png" alt="">
+  এখানে data টা ইউজার পাবে এবং ইউজার data গুয়লাকে একটা array of object আকারে রাখবে । <br> তাই চাইলে users কে সরাসরি ব্যেবহার করা যাবেনা <br><br>
+
+  যেহেতু data গুলা পেয়ে গেছি সেহেতু সেগুলাকে dynamic ভাবে map করে দেখাতে পারি নিচের নিয়মে <img class="w-700" src="./ifile/show data dynamicly.png" alt=""><br><br> <img class="w-700" src="./ifile/show data dynamicly properly.png" alt="">
+
+
+
+</p>
+</body>
+</html>
