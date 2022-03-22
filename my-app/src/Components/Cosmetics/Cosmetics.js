@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Cosmatic from '../Cosmatic/Cosmatic';
+import { getTotal } from '../utilities/fakedb';
+
+
+
+
 
 const Cosmetics = () => {
     const [cosmatics , setCosmatics] = useState([]);
@@ -9,10 +14,13 @@ const Cosmetics = () => {
         .then(res => res.json())
         .then(data => setCosmatics(data));
     }, []);
-
+    
+    const total = getTotal(cosmatics);
+    
     return (
-        <div>
+        <div >
             <h1>wellCome 'to My Cosmatics Store</h1>
+            <p>money need:- {total}</p>
         {
             cosmatics.map(cosmatic => <Cosmatic 
                 key={cosmatic.id} 
