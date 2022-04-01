@@ -1,0 +1,37 @@
+.reviwe-item {
+  border: 1px solid #95a0a7;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 21px;
+  display: flex;
+  /* width: 500px; */
+}
+.reviwe-item img {
+  width: 91px;
+}
+.reviwe-item-details p {
+  margin: 0;
+}
+.reviwe-item-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.delete-btn{
+    background-color: #ffa9a9;
+    border: none;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.delete-container{
+    display: flex;
+    align-items: center;
+}
+
+.delete-icon {
+   font-size: 27px;
+  color: #eb5757;
+}
